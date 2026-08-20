@@ -1,0 +1,40 @@
+{
+  "accounts": [
+    { "id": "ACC-1001", "owner": "Alice Johnson", "currency": "USD", "balance": "5000.00", "blocked": false },
+    { "id": "ACC-1002", "owner": "Bob Smith", "currency": "USD", "balance": "1200.00", "blocked": false },
+    { "id": "ACC-1003", "owner": "Carol Danvers", "currency": "EUR", "balance": "800.00", "blocked": false },
+    { "id": "ACC-9999", "owner": "Blocked Merchant", "currency": "USD", "balance": "0.00", "blocked": true }
+  ],
+  "payments": [
+    {
+      "id": "PAY-0001",
+      "sourceAccountId": "ACC-1001",
+      "destinationAccountId": "ACC-1002",
+      "amount": "125.50",
+      "currency": "USD",
+      "reference": "invoice-42",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "PAY-0002",
+      "sourceAccountId": "ACC-1002",
+      "destinationAccountId": "ACC-1001",
+      "amount": "5000.00",
+      "currency": "USD",
+      "reference": "rent-march",
+      "status": "FAILED",
+      "failureReason": "Account ACC-1002 has insufficient funds: balance=1200.00, requested=5000.00"
+    },
+    {
+      "id": "PAY-0003",
+      "sourceAccountId": "ACC-1001",
+      "destinationAccountId": "ACC-9999",
+      "amount": "300.00",
+      "currency": "USD",
+      "reference": "merchant-payout",
+      "status": "REJECTED",
+      "failureReason": "One of the accounts is blocked"
+    }
+  ]
+}
+
