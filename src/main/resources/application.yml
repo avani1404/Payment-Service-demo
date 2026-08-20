@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: payments-service
+
+server:
+  port: 8080
+
+# Application-specific settings
+payments:
+  fraud:
+    # Single-transaction limit; payments above this are rejected by the fraud screen.
+    max-amount: 10000.00
+
+logging:
+  level:
+    com.example.payments: INFO
+
