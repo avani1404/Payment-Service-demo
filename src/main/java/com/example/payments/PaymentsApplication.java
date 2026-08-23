@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * <p>Boots the Spring context, component-scans {@code com.example.payments},
  * and starts the embedded web server exposing the payment REST API.
+ * Test
  */
 @SpringBootApplication
 public class PaymentsApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(PaymentsApplication.class, args);
     }
