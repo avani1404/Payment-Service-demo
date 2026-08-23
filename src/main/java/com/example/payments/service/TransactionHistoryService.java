@@ -18,7 +18,6 @@ import java.util.List;
 public class TransactionHistoryService {
 
     private static final Logger log = LoggerFactory.getLogger(TransactionHistoryService.class);
-
     private static final String DB_URL = "jdbc:mysql://localhost:3306/payments";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "P@ssw0rd123";
